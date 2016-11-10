@@ -30,6 +30,16 @@ def read_space_objects_data_from_file(input_filename):
 
 
 def parse_star_parameters(line, star):
+
+    A = line.split()
+    star.R = float(A[1])
+    star.color = A[2]
+    star.m = float(A[3])
+    star.x = float(A[4])
+    star.y = float(A[5])
+    star.Vx = float(A[6])
+    star.Vy = float(A[7])
+
     """Считывает данные о звезде из строки.
     Входная строка должна иметь слеюущий формат:
     Star <радиус в пикселах> <цвет> <масса> <x> <y> <Vx> <Vy>
@@ -47,6 +57,16 @@ def parse_star_parameters(line, star):
     pass  # FIXME: not done yet
 
 def parse_planet_parameters(line, planet):
+
+    B = line.split()
+    planet.R = float(B[1])
+    planet.color = B[2]
+    planet.m = float(B[3])
+    planet.x = float(B[4])
+    planet.y = float(B[5])
+    planet.Vx = float(B[6])
+    planet.Vy = float(B[7])
+
     """Считывает данные о планете из строки.
     Предполагается такая строка:
     Входная строка должна иметь слеюущий формат:
