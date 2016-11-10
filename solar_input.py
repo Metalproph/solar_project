@@ -25,6 +25,12 @@ def read_space_objects_data_from_file(input_filename):
                 objects.append(star)
             else:
                 print("Unknown space object")
+            if object_type == "planet":  # FIXME: do the same for planet
+                planet = Planet()
+                parse_planet_parameters(line, planet)
+                objects.append(planet)
+            else:
+                print("Unknown space object")
 
     return objects
 
